@@ -51,9 +51,9 @@
    <left>
       <VBox fx:id="leftPanel" prefHeight="357.0" prefWidth="96.0" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fitHeight="89.0" fitWidth="101.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="imageViewIcon" fitHeight="89.0" fitWidth="101.0" pickOnBounds="true" preserveRatio="true">
                <VBox.margin>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                  <Insets />
                </VBox.margin>
                <image>
                   <Image url="@../../../images/profile.png" />

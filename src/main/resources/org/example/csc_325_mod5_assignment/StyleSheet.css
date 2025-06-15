@@ -8,6 +8,8 @@
 
 #leftPanel {
     -fx-background-color: #cc6600;
+    -fx-padding: 10;
+    -fx-spacing: 10;
 }
 
 #rightPanel {
