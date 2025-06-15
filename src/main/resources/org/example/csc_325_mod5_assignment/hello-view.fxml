@@ -6,19 +6,19 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="407.0" prefWidth="633.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
    <cursor>
       <Cursor fx:constant="DEFAULT" />
    </cursor>
    <center>
-      <TableView prefHeight="327.0" prefWidth="337.0" BorderPane.alignment="CENTER">
+      <TableView prefHeight="547.0" prefWidth="529.0" BorderPane.alignment="CENTER">
         <columns>
-          <TableColumn prefWidth="34.0" text="ID" />
-          <TableColumn prefWidth="90.0" text="First Name" />
-            <TableColumn prefWidth="79.0" text="Last Name" />
-            <TableColumn prefWidth="74.0" text="Department" />
-            <TableColumn prefWidth="56.0" text="Major" />
-            <TableColumn prefWidth="77.0" text="Email" />
+          <TableColumn prefWidth="60.0" text="ID" />
+          <TableColumn prefWidth="86.0" text="First Name" />
+            <TableColumn prefWidth="88.0" text="Last Name" />
+            <TableColumn prefWidth="93.0" text="Department" />
+            <TableColumn minWidth="4.0" prefWidth="86.0" text="Major" />
+            <TableColumn prefWidth="103.0" text="Email" />
         </columns>
       </TableView>
    </center>
@@ -49,14 +49,14 @@
       </MenuBar>
    </top>
    <bottom>
-      <ProgressBar prefHeight="28.0" prefWidth="664.0" progress="0.0" BorderPane.alignment="CENTER" />
+      <ProgressBar prefHeight="33.0" prefWidth="808.0" progress="0.0" BorderPane.alignment="CENTER" />
    </bottom>
    <left>
       <VBox prefHeight="357.0" prefWidth="96.0" BorderPane.alignment="CENTER">
          <children>
             <ImageView fitHeight="89.0" fitWidth="101.0" pickOnBounds="true" preserveRatio="true">
                <VBox.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </VBox.margin>
                <image>
                   <Image url="@../../../images/profile.png" />
@@ -66,9 +66,9 @@
       </VBox>
    </left>
    <right>
-      <VBox prefHeight="354.0" prefWidth="138.0" BorderPane.alignment="CENTER">
+      <VBox prefHeight="547.0" prefWidth="182.0" BorderPane.alignment="CENTER">
          <children>
-            <VBox prefHeight="191.0" prefWidth="138.0">
+            <VBox prefHeight="165.0" prefWidth="182.0">
                <children>
                   <TextField promptText="First Name">
                      <VBox.margin>
@@ -102,26 +102,27 @@
                   </TextField>
                </children>
             </VBox>
-            <VBox prefHeight="158.0" prefWidth="138.0">
+            <VBox prefHeight="120.0" prefWidth="182.0" />
+            <VBox prefHeight="207.0" prefWidth="182.0">
                <children>
-                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Clear">
+                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="40.0" prefWidth="162.0" text="Clear">
                      <VBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </VBox.margin>
                   </Button>
-                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Add">
+                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="40.0" prefWidth="162.0" text="Add">
                      <VBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </VBox.margin>
                   </Button>
-                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Delete">
+                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="40.0" prefWidth="162.0" text="Delete">
                      <VBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </VBox.margin>
                   </Button>
-                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Edit">
+                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="40.0" prefWidth="162.0" text="Edit">
                      <VBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </VBox.margin>
                   </Button>
                </children></VBox>
