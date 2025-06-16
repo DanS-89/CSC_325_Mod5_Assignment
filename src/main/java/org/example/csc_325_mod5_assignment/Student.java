@@ -1,5 +1,7 @@
 package org.example.csc_325_mod5_assignment;
 
+import javafx.scene.image.Image;
+
 public class Student {
     private int id;
     private String firstName;
@@ -7,9 +9,9 @@ public class Student {
     private String department;
     private String major;
     private String email;
-    private String imageUrl;
+    private Image imageUrl;
 
-    public Student(int id, String firstName, String lastName, String department, String major, String email, String imageUrl) {
+    public Student(int id, String firstName, String lastName, String department, String major, String email, Image imageUrl) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -61,10 +63,10 @@ public class Student {
         this.email = email;
     }
 
-    public String getImageUrl() {
+    public Image getImageUrl() {
         return imageUrl;
     }
-    public void setImageUrl(String imageUrl) {
+    public void setImageUrl(Image imageUrl) {
         this.imageUrl = imageUrl;
     }
 }
