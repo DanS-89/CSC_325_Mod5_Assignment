@@ -5,6 +5,7 @@ import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 
 public class HelloController {
+
     @FXML
     private TextField firstNameTextField, lastNameTextField, departmentTextField, majorTextField, emailTextField, imageTextField;
 
@@ -15,7 +16,7 @@ public class HelloController {
     private ImageView imageViewStudent;
 
     @FXML
-    private TableView<Student> studentTable;
+    private TableView<Student> studentTableView;
 
     @FXML
     private TableColumn<Student, Integer> idColumn;
@@ -30,6 +31,8 @@ public class HelloController {
     private Menu fileMenu, editMenu, themeMenu, helpMenu;
 
     @FXML
-    private MenuItem closeMenuItem, deleteMenuItem, actionOneMenuItem, aboutMenuItem;
+    private MenuItem closeMenuItem, deleteMenuItem, actionOneMenuItem, about;
+
+
 
 }

@@ -11,7 +11,7 @@
       <Cursor fx:constant="DEFAULT" />
    </cursor>
    <center>
-      <TableView fx:id="studentTable" maxWidth="1.7976931348623157E308" prefHeight="547.0" prefWidth="529.0" BorderPane.alignment="CENTER">
+      <TableView fx:id="studentTableView" maxWidth="1.7976931348623157E308" prefHeight="547.0" prefWidth="529.0" BorderPane.alignment="CENTER">
         <columns>
           <TableColumn fx:id="idColumn" prefWidth="60.0" text="ID" />
           <TableColumn fx:id="firstNameColumn" prefWidth="86.0" text="First Name" />
