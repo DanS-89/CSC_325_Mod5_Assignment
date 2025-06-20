@@ -129,7 +129,7 @@
    <bottom>
       <VBox prefHeight="44.0" prefWidth="848.0">
          <children>
-            <ProgressBar prefHeight="40.0" prefWidth="800.0" progress="0.0" />
+            <ProgressBar prefHeight="40.0" prefWidth="861.0" progress="0.0" />
          </children>
       </VBox>
    </bottom>

@@ -57,6 +57,14 @@ public class GUIController {
 
         closeMenuItem.setOnAction(event -> javafx.application.Platform.exit());
 
+        aboutMenuItem.setOnAction(event -> {
+           Alert alert = new Alert(Alert.AlertType.INFORMATION);
+           alert.setTitle("About");
+           alert.setHeaderText("CSC 325 Full Stack Project");
+           alert.setContentText("Developer: Dan Stevens\nVersion: 1.0");
+           alert.showAndWait();
+        });
+
         studentTableView.setOnMouseClicked(event -> {
             Student selected = studentTableView.getSelectionModel().getSelectedItem();
             if (selected != null) {
