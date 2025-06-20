@@ -14,6 +14,8 @@ import java.io.File;
 public class GUIController {
 
     private ObservableList<Student> studentList = FXCollections.observableArrayList();
+    private Image selectedImage = null;
+    private final Image defaultImage = new Image(getClass().getResource("/images/profile.png").toString());
 
     @FXML
     private TextField firstNameTextField, lastNameTextField, departmentTextField, majorTextField, emailTextField, imageTextField;
@@ -63,14 +65,21 @@ public class GUIController {
                 departmentTextField.setText(selected.getDepartment());
                 majorTextField.setText(selected.getMajor());
                 emailTextField.setText(selected.getEmail());
-                imageViewStudent.setImage(selected.getImageUrl());
+
+                Image defaultImage = new Image(getClass().getResourceAsStream("/images/profile.png"));
+                if(selected.getImageUrl() != null) {
+                    imageViewStudent.setImage(selected.getImageUrl());
+                    selectedImage = selected.getImageUrl();
+                } else {
+                    imageViewStudent.setImage(defaultImage);
+                    selectedImage = null;
+                }
             }
         });
     }
 
     @FXML
     private void onAddButtonClick() {
-        Image image = imageViewStudent.getImage();
         int newId = studentList.size() + 1;
 
         Student newStudent = new Student(
@@ -80,7 +89,7 @@ public class GUIController {
                 departmentTextField.getText(),
                 majorTextField.getText(),
                 emailTextField.getText(),
-                image
+                selectedImage
         );
         studentList.add(newStudent);
         clearFields();
@@ -93,7 +102,8 @@ public class GUIController {
         departmentTextField.clear();
         majorTextField.clear();
         emailTextField.clear();
-        imageTextField.clear();
+        imageViewStudent.setImage(defaultImage);
+        selectedImage = null;
     }
 
     @FXML
@@ -114,7 +124,7 @@ public class GUIController {
             selected.setDepartment(departmentTextField.getText());
             selected.setMajor(majorTextField.getText());
             selected.setEmail(emailTextField.getText());
-            selected.setImageUrl(imageViewStudent.getImage());
+            selected.setImageUrl(selectedImage);
 
             studentTableView.refresh();
             clearFields();
@@ -132,8 +142,8 @@ public class GUIController {
         File selectedFile = fileChooser.showOpenDialog(imageViewStudent.getScene().getWindow());
 
         if(selectedFile != null) {
-            Image image = new Image(selectedFile.toURI().toString());
-            imageViewStudent.setImage(image);
+            selectedImage = new Image(selectedFile.toURI().toString());
+            imageViewStudent.setImage(selectedImage);
         }
     }
 }
