@@ -6,7 +6,7 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" stylesheets="@StyleSheet.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.csc_325_mod5_assignment.HelloController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" stylesheets="@StyleSheet.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.csc_325_mod5_assignment.GUIController">
    <cursor>
       <Cursor fx:constant="DEFAULT" />
    </cursor>
@@ -127,10 +127,10 @@
       </VBox>
    </right>
    <bottom>
-      <HBox maxWidth="1.7976931348623157E308" minWidth="0.0" prefHeight="44.0" BorderPane.alignment="CENTER">
+      <VBox prefHeight="44.0" prefWidth="848.0">
          <children>
-            <ProgressBar prefHeight="37.0" prefWidth="839.0" progress="0.0" />
+            <ProgressBar prefHeight="40.0" prefWidth="800.0" progress="0.0" />
          </children>
-      </HBox>
+      </VBox>
    </bottom>
 </BorderPane>

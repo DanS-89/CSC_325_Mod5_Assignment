@@ -11,7 +11,7 @@ import javafx.stage.FileChooser;
 
 import java.io.File;
 
-public class HelloController {
+public class GUIController {
 
     private ObservableList<Student> studentList = FXCollections.observableArrayList();
 
