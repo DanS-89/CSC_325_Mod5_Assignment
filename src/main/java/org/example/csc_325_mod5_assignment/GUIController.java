@@ -11,12 +11,21 @@ import javafx.stage.FileChooser;
 
 import java.io.File;
 
+/**
+ * GUI controller class
+ */
 public class GUIController {
 
+    /**
+     * member variables for controller class
+     */
     private ObservableList<Student> studentList = FXCollections.observableArrayList();
     private Image selectedImage = null;
     private final Image defaultImage = new Image(getClass().getResource("/images/profile.png").toString());
 
+    /**
+     * Declare and name GUI
+     */
     @FXML
     private TextField firstNameTextField, lastNameTextField, departmentTextField, majorTextField, emailTextField, imageTextField;
 
@@ -44,6 +53,10 @@ public class GUIController {
     @FXML
     private MenuItem closeMenuItem, deleteMenuItem, actionOneMenuItem, aboutMenuItem;
 
+    /**
+     * Initialize the GUI controller
+     * Bind table columns, set actions, load images, handle row selection
+     */
     @FXML
     public void initialize() {
         idColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
@@ -86,6 +99,9 @@ public class GUIController {
         });
     }
 
+    /**
+     * adds a student record to the table view
+     */
     @FXML
     private void onAddButtonClick() {
         int newId = studentList.size() + 1;
@@ -103,6 +119,9 @@ public class GUIController {
         clearFields();
     }
 
+    /**
+     * clears all text fields in the GUI
+     */
     @FXML
     private void clearFields() {
         firstNameTextField.clear();
@@ -114,6 +133,9 @@ public class GUIController {
         selectedImage = null;
     }
 
+    /**
+     * deletes a student record from the table view
+     */
     @FXML
     private void onDeleteButtonClick() {
         Student selected = studentTableView.getSelectionModel().getSelectedItem();
@@ -123,6 +145,9 @@ public class GUIController {
         }
     }
 
+    /**
+     * edits a student record in the table view
+     */
     @FXML
     private void onEditButtonClick() {
         Student selected = studentTableView.getSelectionModel().getSelectedItem();
@@ -139,6 +164,9 @@ public class GUIController {
         }
     }
 
+    /**
+     * function to set a student picture when clicking on the image view
+     */
     @FXML
     private void onImageViewButtonClick() {
         FileChooser fileChooser = new FileChooser();
